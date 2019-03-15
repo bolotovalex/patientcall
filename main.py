@@ -3,16 +3,10 @@ import time
 import RPi.GPIO as GPIO
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_OFF)
-GPIO.setup(11, GPIO.IN, pull_up_down=GPIO.PUD_OFF)
-GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_OFF)
-GPIO.setup(15, GPIO.IN, pull_up_down=GPIO.PUD_OFF)
-#GPIO.setup(37, GPIO.OUT, initial=GPIO.HIGH)
-
-state_7='Wait'
-state_11='Wait'
-state_13='Wait'
-state_15='Wait'
+GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(11, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(15, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 def task():
 	check_state(7,l3)
@@ -57,11 +51,6 @@ l5.pack(side=LEFT)
 l6.pack(side=RIGHT)
 l7.pack(side=LEFT)
 l8.pack(side=RIGHT)
-
-#GPIO.add_event_detect(7,GPIO.RISING,callback=gpio7,bouncetime=200)
-#GPIO.add_event_detect(11,GPIO.RISING,callback=gpio11,bouncetime=200)
-#GPIO.add_event_detect(13,GPIO.RISING,callback=gpio13,bouncetime=200)
-#GPIO.add_event_detect(15,GPIO.RISING,callback=gpio15,bouncetime=200)
 
 win.after(50, task)
 win.mainloop()
