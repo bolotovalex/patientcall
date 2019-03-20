@@ -20,7 +20,6 @@ def check_state(pin, label):
     global play_state
     state = GPIO.input(pin)
     if state == 0:
-        play_state = True
         label.config(text='ВХОДИТЕ', bg='green')
         if play_state == True:
             pygame.mixer.music.play()
