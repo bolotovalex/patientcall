@@ -4,7 +4,7 @@ import pygame
 import RPi.GPIO as GPIO
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 pygame.mixer.init()
 pygame.mixer.music.load("sound.wav")
 pygame.mixer.music.play()
