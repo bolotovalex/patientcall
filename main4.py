@@ -21,13 +21,13 @@ def check_state(pin, label):
     time.sleep(0.4)
     state = GPIO.input(pin)
     if state == 0:
-        label.config(text='ВХОДИТЕ', bg='green')
+        label.config(text='СВОБОДНО')
         if play_state == True:
             pygame.mixer.music.play()
             print('1')
             play_state = False
     elif state == 1:
-        label.config(text='ОЖИДАЙТЕ', bg='#FF0000')
+        label.config(text='ЗАНЯТНО')
         print('2')
         play_state = True
 
@@ -36,7 +36,7 @@ win.title("Терминал вызова")
 win.geometry('1280x720')
 win.configure(background='black')
 
-l1 = Label(width=15, height=2, bg='#3515B0', text="Проверка", fg='white', font='Arial 80 bold')
+l1 = Label(width=14, height=4, bg='#3515B0', text="Проверка", fg='white', font='Arial 140 bold')
 l1.pack(side=TOP)
 
 
