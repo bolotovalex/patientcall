@@ -13,7 +13,7 @@ play = True
 
 
 def task():
-	global play
+	global play;
     check_state(7,l1)
     print(play)
 	win.after(100, task)
