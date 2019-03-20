@@ -24,9 +24,9 @@ def check_state(pin, label):
         if play_state is True:
             pygame.mixer.music.play()
             play_state = False
-        elif state == 1:
-            label.config(text='ОЖИДАЙТЕ', bg='#FF0000')
-            play_state = True
+    elif state == 1:
+        label.config(text='ОЖИДАЙТЕ', bg='#FF0000')
+        play_state = True
 
 win = Tk()
 win.title("Терминал вызова")
