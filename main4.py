@@ -18,6 +18,7 @@ def task():
 
 def check_state(pin, label):
     global play_state
+    time.sleep(400)
     state = GPIO.input(pin)
     if state == 0:
         label.config(text='ВХОДИТЕ', bg='green')
