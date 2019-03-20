@@ -10,28 +10,24 @@ pygame.mixer.music.load("sound.wav")
 pygame.mixer.music.play()
 play = True
 
-
-
 def task():
-	global play;
+    global play
     check_state(7,l1)
-	win.after(100, task)
+    win.after(100, task)
 
 def check_state(pin, label):
-	global play
+    global play
     state = GPIO.input(pin)
-	if state == 0:
+    if state == 0:
         play = True
-		label.config(text='ВХОДИТЕ', bg='green')
-        if play is True:
-            pygame.mixer.music.play()
+        label.config(text='ВХОДИТЕ', bg='green')
+        if play is True:pygame.mixer.music.play()
             play = False
-	
-    elif state == 1:
-		label.config(text='ОЖИДАЙТЕ', bg='#FF0000')
-        play = True
-win = Tk()
+        elif state == 1:
+            label.config(text='ОЖИДАЙТЕ', bg='#FF0000')
+            play = True
 
+win = Tk()
 win.title("Терминал вызова")
 win.geometry('1280x720')
 win.configure(background='black')
