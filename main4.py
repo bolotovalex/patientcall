@@ -22,7 +22,7 @@ def check_state(pin, label):
     if state == 0:
         play_state = True
         label.config(text='ВХОДИТЕ', bg='green')
-        if play_state is True:
+        if play_state == True:
             pygame.mixer.music.play()
             print('1')
             play_state = False
