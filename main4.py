@@ -15,7 +15,6 @@ play = True
 def task():
 	global play;
     check_state(7,l1)
-    print(play)
 	win.after(100, task)
 
 def check_state(pin, label):
