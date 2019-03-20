@@ -1,7 +1,7 @@
 from tkinter import *
 import time
 import pygame
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 #GPIO.setwarnings(False)
 #GPIO.setmode(GPIO.BOARD)
 #GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
@@ -18,7 +18,7 @@ def task():
 def check_state(pin, label):
 	state = GPIO.input(pin)
 	if state == 0:
-		label.config(text='ВХОДИТЕ', bg='green')#; pygame.mixer.music.load("sound.wav"); pygame.mixer.music.play()
+		label.config(text='ВХОДИТЕ', bg='green'); pygame.mixer.music.load("sound.wav"); pygame.mixer.music.play()
 	elif state == 1:
 		label.config(text='ОЖИДАЙТЕ', bg='#FF0000')
 win = Tk()
