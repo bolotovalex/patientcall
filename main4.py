@@ -12,7 +12,6 @@ play_state = True
 
 def task():
     global play_state
-    print(play_state)
     check_state(7,l1)
     win.after(100, task)
 
@@ -24,11 +23,9 @@ def check_state(pin, label):
         label.config(text='СВОБОДНО')
         if play_state == True:
             pygame.mixer.music.play()
-            print('1')
             play_state = False
     elif state == 1:
         label.config(text='ЗАНЯТНО')
-        print('2')
         play_state = True
 
 win = Tk()
