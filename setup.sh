@@ -128,13 +128,6 @@ if [ "$ch2" == Y ] || [ "$ch2" == y ]; then
   echo "gateway $gateway" >> /etc/network/interfaces
   echo "dns-nameservers 77.88.8.8" >> /etc/network/interfaces
 fi
-if [[ "$ch_network" == "N" ]] || [[ "$ch_network" == "n" ]]; then
-  echo "auto lo" > /etc/network/interfaces
-  echo "iface lo inet loopback" >> /etc/network/interfaces
-  echo "auto eth0" >> /etc/network/interfaces
-  echo "iface eth0 inet dhcp" >> /etc/network/interfaces
-  echo "dns-nameservers 10.41.129.130" >> /etc/network/interfaces
-fi
 
 #Reboot
 
