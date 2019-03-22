@@ -107,7 +107,7 @@ echo "@lxpanel --profile LXDE-pi
 @xset -dpms
 @xset s noblank
 @unclutter -idle 5
-@python3 /home/pi/patientcall/$2" > /home/pi/.config/lxsession/LXDE-pi/autostart
+@python3 /home/pi/patientcall/$2.py" > /home/pi/.config/lxsession/LXDE-pi/autostart
 chown pi:pi /home/pi/.config/lxsession/LXDE-pi/autostart
 chmod 744 /home/pi/.config/lxsession/LXDE-pi/autostart
 
