@@ -25,7 +25,7 @@ def check_state(pin, label):
             pygame.mixer.music.play()
             play_state = False
     elif state == 1:
-        label.config(text='ЗАНЯТНО')
+        label.config(text='ЗАНЯТО')
         play_state = True
 
 win = Tk()
